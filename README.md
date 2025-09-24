@@ -17,4 +17,9 @@ EEG analysis was conducted using [MATLAB](https://www.mathworks.com/help/install
 The repository is organised into xx folders:
 - 
 
-EEG analysis 
+## How to use this repository
+1. Start with the `matlab/` folder:
+   - Run the main analysis script to generate spreadsheets that will be used as source data frames for the next steps of the analysis.
+2. Go to `stata/` folder:
+   - Run 'IPD_MA_analysis' 
+   - Instructions are provided to reproduce the version used in the thesis.
