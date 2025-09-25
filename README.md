@@ -21,5 +21,11 @@ The repository is organised into xx folders:
 1. Start with the `matlab/` folder:
    - Run the main analysis script to generate spreadsheets that will be used as source data frames for the next steps of the analysis.
 2. Go to `stata/` folder:
-   - Run 'IPD_MA_analysis' 
-   - Instructions are provided to reproduce the version used in the thesis.
+   - Run 'IPD_MA_analysis' to generate spreadsheets that will be used as source data frames for the next steps of the analysis.
+3. Go to `R/` folder:
+    - Run 'validity_analysis' for analysis of validity assessment
+    - Run 'interpretability_analysis' for analysis of interpretability assessment: typical magnitudes for noxious and innocuous stimuli
+4. Go to `stata/` folder:
+   - Run 'IPD_MA_analysis_2' to generate spreadsheets that will be used as source data frames for the next steps of the analysis.
+5. Go to `R/` folder:
+    - Run 'interpretability_analysis_2' for analysis of interpretability assessment: typical magnitudes and effect sizes for each stimulus type

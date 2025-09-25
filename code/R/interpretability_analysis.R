@@ -46,9 +46,6 @@ label <- c("Oxford (n=341)","Exeter (n=28)","UCL (n=86)")
 res <- rma.uni(yi=yi,sei=sei,method="REML",test="knha")
 sd_nox <- sqrt(res$vb)
 
-uncorrected_cohensd_nox <- res$b/sd_nox
-
-
 mlabfun <- function(text, x) {
   list(bquote(paste(.(text),
                     " (",

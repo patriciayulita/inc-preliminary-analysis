@@ -214,7 +214,7 @@ drop event
 save bg_allsites, replace
 
 *remove duplicates in background (only use the first epoch of each setname)
-sort setname
+sort setname epoch
 duplicates drop setname, force 
 save bg_allsites_unique, replace
 
@@ -232,7 +232,6 @@ rename se_diff secoef
 append using nox_innoc_3sites
 
 *sort
-gen study_id = .
 replace study_id = 1 if event == "Touch"
 replace study_id = 2 if event == "Control lance"
 replace study_id = 3 if event == "Immunisation"
