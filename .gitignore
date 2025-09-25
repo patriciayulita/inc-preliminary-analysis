@@ -35,6 +35,12 @@ venv/
 *.mex*
 *.fig
 
+# Stata
+*.smcl
+*.tmp
+*.temp
+*.~*
+
 # Logs
 *.log
 
