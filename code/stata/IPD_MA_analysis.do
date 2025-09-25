@@ -17,7 +17,7 @@ keep file coef_hl varcoef_hl coef_cl varcoef_cl
 order file coef_hl varcoef_hl coef_cl varcoef_cl
 
 * create a new variable of magnitude difference between noxious and innocuous
-gen mag_diff = coef_hl - coef_cl
+gen coef_mag_diff = coef_hl - coef_cl
 export delimited hl_cl_NRFtable_ox.csv, replace
 
 //exeter
@@ -36,7 +36,7 @@ keep file coef_hl varcoef_hl coef_cl varcoef_cl
 order file coef_hl varcoef_hl coef_cl varcoef_cl
 
 * create a new variable of magnitude difference between noxious and innocuous
-gen mag_diff = coef_hl - coef_cl
+gen coef_mag_diff = coef_hl - coef_cl
 export delimited hl_cl_NRFtable_ex.csv, replace
 
 //ucl
@@ -55,6 +55,6 @@ keep file setname coef_hl varcoef_hl coef_cl varcoef_cl
 order file setname coef_hl varcoef_hl coef_cl varcoef_cl
 
 * create a new variable of magnitude difference between noxious and innocuous
-gen mag_diff = coef_hl - coef_cl
+gen coef_mag_diff = coef_hl - coef_cl
 export delimited hl_cl_NRFtable_ucl.csv, replace
 	   
