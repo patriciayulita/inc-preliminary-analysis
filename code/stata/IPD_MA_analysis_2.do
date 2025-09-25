@@ -190,6 +190,39 @@ append using nox_3sites
 gen inv_var = 1/varcoef
 save nox_innoc_3sites, replace
 
+import delimited "dataframe_ox_bg.csv", clear
+gen sites = "Oxford"
+save bg_ox, replace
+
+import delimited "dataframe_ex_bg.csv", clear
+gen sites = "Exeter"
+save bg_ex, replace
+
+import delimited "dataframe_ucl_bg.csv", clear
+keep file epoch event coef varcoef
+gen sites = "UCL"
+tostring file, replace
+save bg_ucl, replace
+
+
+append using bg_ex
+append using bg_ox
+rename file setname
+rename coef coef_bg
+rename varcoef varcoef_bg
+drop event
+save bg_allsites, replace
+
+*remove duplicates in background (only use the first epoch of each setname)
+sort setname
+duplicates drop setname, force 
+save bg_allsites_unique, replace
+
+joinby setname using nox_innoc_3sites, unmatched(using)
+
+* to save .dta into .csv
+export delimited nox_innoc_3sites_withbg.csv, replace
+
 
 use hl_cl_NRFtable_3sites, clear
 gen event="Magdiff heel lance-control lance"
