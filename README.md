@@ -18,14 +18,20 @@ The repository is organised into xx folders:
 - 
 
 ## How to use this repository
-1. Start with the `matlab/` folder:
-   - Run the main analysis script to generate spreadsheets that will be used as source data frames for the next steps of the analysis.
-2. Go to `stata/` folder:
-   - Run 'IPD_MA_analysis' to generate spreadsheets that will be used as source data frames for the next steps of the analysis.
-3. Go to `R/` folder:
-    - Run 'validity_analysis' for analysis of validity assessment
-    - Run 'interpretability_analysis' for analysis of interpretability assessment: typical magnitudes for noxious and innocuous stimuli
-4. Go to `stata/` folder:
-   - Run 'IPD_MA_analysis_2' to generate spreadsheets that will be used as source data frames for the next steps of the analysis.
-5. Go to `R/` folder:
-    - Run 'interpretability_analysis_2' for analysis of interpretability assessment: typical magnitudes and effect sizes for each stimulus type
+A. Validity and interpretability analysis
+   1. Start with the `matlab/` folder:
+      - Run `IPD_MA_analysis` to generate spreadsheets that will be used as source data frames for the next steps of the analysis.
+   2. Go to `stata/` folder:
+      - Run `IPD_MA_analysis` to generate spreadsheets that will be used as source data frames for the next steps of the analysis.
+   3. Go to `R/` folder:
+      - Run `validity_analysis` for analysis of validity assessment
+      - Run `interpretability_analysis` for analysis of interpretability assessment: typical magnitudes for noxious and innocuous stimuli
+   4. Go to `stata/` folder:
+      - Run `IPD_MA_analysis_2` to generate spreadsheets that will be used as source data frames for the next steps of the analysis.
+   5. Go to `R/` folder:
+      - Run `interpretability_analysis_2` for analysis of interpretability assessment: typical magnitudes and effect sizes for each stimulus type
+
+B. Reliability analysis
+   1. Start with the `matlab/` folder:
+      - Run `responses_data_cleaning_g` to prepare the responses spreadsheet (`reliability assessment_responses_cleaned`) to a compatible format to be used as source data frames for the next steps of the analysis. This spreadsheet contains n=966 responses, which is from n=483 epochs that appear twice so each epoch can be rated twice by each rater (for intra-rater reliability assessment). The discrepancy between the amount of epochs here and the number reported in Figure 5.4 of the thesis (n=483 epochs here vs n=457 epochs in thesis) is because some epochs were excluded after the assessment due to ineligible age range. The exclusion of these ineligible epochs were performed in the next script.
+
