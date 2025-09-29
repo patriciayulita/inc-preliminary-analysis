@@ -4,6 +4,7 @@ install.packages("tidyverse")
 library(metafor)
 library(tidyverse)
 
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 setwd(file.path("..", "..", "result"))
 
 # averaging within sites --------------------------------------------

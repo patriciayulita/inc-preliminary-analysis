@@ -34,4 +34,10 @@ A. Validity and interpretability analysis
 B. Reliability analysis
    1. Start with the `matlab/` folder:
       - Run `responses_data_cleaning_g` to prepare the responses spreadsheet (`reliability assessment_responses_cleaned`) to a compatible format to be used as source data frames for the next steps of the analysis. This spreadsheet contains n=966 responses, which is from n=483 epochs that appear twice so each epoch can be rated twice by each rater (for intra-rater reliability assessment). The discrepancy between the amount of epochs here and the number reported in Figure 5.4 of the thesis (n=483 epochs here vs n=457 epochs in thesis) is because some epochs were excluded after the assessment due to ineligible age range. The exclusion of these ineligible epochs were performed in the next script.
-
+2. Go to `R/` folder:
+      - Run `reliability_ox` for reliability analysis of Oxford epochs
+      - Run `reliability_ex` for reliability analysis of Exeter epochs
+      - Run `reliability_ucl` for reliability analysis of UCL epochs
+      - Run `reliability_betweensites` for average reliability coefficients between sites
+3. Go to `stata/` folder:
+      - Run `reliability` to generate the agreement cross-table figures and list of agreement coefficient figures for each reliability assesment. Manually screenshot the tables generated. The list of agreement coefficients figures generated here could also be used as a sanity check with the results produced using the script in R (B. Reliability analysis, step 2). 

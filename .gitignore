@@ -27,6 +27,7 @@ env/
 venv/
 
 # R
+.Rapp.history
 .Rhistory
 .RData
 .Rproj.user/
