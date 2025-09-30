@@ -1,0 +1,7 @@
+﻿reliability_type,sites,ac1coef,ac1se
+Inter-rater,Oxford,0.948,0.008
+Intra-rater,Oxford,0.972,0.025
+Inter-rater,UCL,0.971,0.003
+Intra-rater,UCL,0.994,0.006
+Inter-rater,Exeter,1,0
+Intra-rater,Exeter,1,0

@@ -1,5 +1,5 @@
-cd "../.."              // go up two directories (from stata/ to project/)
-cd "result"            // move into result/
+cd "../.."          // go up two directories (from stata/ to project/)
+cd "result"         // move into result/
 
 ssc install kappaetc
 
@@ -112,7 +112,7 @@ label values r2 includeexclude
 
 tab r1 r2 //STATA did not show categories with decisions equal to 0, so the figure in the thesis was created manually in excel spreadsheet
 
-* kappaetc r1 r2 , benchmark(probabilistic,scale(altman))showscale //kappaetc command generated an error result because the ratings do not vary
+kappaetc r1 r2 , benchmark(probabilistic,scale(altman))showscale //kappaetc command generated an error result because the ratings do not vary
 
 // interrater_r1o1_r2o2
 
