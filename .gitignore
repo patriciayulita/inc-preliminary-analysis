@@ -1,4 +1,8 @@
 result/
+code/R/reliability_ex.R
+code/R/reliability_ox.R 
+code/R/reliability_ucl.R 
+code/R/reliability_betweensites.R 
 
 # macOS system files
 .DS_Store
