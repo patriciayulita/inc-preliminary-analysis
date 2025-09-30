@@ -5,8 +5,6 @@ import delimited "reliability_level1.csv", clear
 
 gen model_mean = 1
 gen weight = 1
-*replace ac1se = 0.000001 if ac1se == 0 // this line is not needed for ipdover reg
-*replace ac1coef = ac1coef + runiform() * 0.000001 if ac1coef == 1
 
 label variable reliability_type "Reliability types"
 label variable sites "Sites"
@@ -21,8 +19,6 @@ import delimited "reliability_level2.csv", clear
 
 gen model_mean = 1
 gen weight = 1
-*replace ac1se = 0.000001 if ac1se == 0 // this line is not needed for ipdover reg
-*replace ac1coef = ac1coef + runiform() * 0.000001 if ac1se == 0.000001
 
 label variable reliability_type "Reliability types"
 label variable sites "Sites"
@@ -64,6 +60,6 @@ est store f4
              f1="Intra-rater, Oxford" f2="Intra-rater, UCL" f3="Intra-rater, Exeter" f4="Average intra-rater reliability") ///
     xtitle("Gwet's AC1 [95% CI]") xline(0)
 
-graph export "Reliability_forestplot.png", replace
+graph export "../result/Reliability_forestplot.png", replace
 
 
