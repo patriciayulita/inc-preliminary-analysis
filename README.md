@@ -1,6 +1,6 @@
 # inc-preliminary-analysis
 
-This repository supports the preliminary analysis of an individual participant data meta-analysis project. This project aims to assess the reliability, validity, and interpretability of an EEG-based measure developed by our research group, Paediatric Neuroimaging group at the University of Oxford, as a proxy measure of analgesic efficacy in newborns, to support drug development trials. 
+This repository supports the preliminary analysis of an individual participant data meta-analysis project, which formed a chapter (Chapter 5) in my doctoral thesis. This project aims to assess the reliability, validity, and interpretability of an EEG-based measure developed by our research group, Paediatric Neuroimaging group at the University of Oxford, as a proxy measure of analgesic efficacy in newborns, to support drug development trials. 
 
 ## Data availability
 
@@ -14,8 +14,24 @@ EEG analysis was conducted using [MATLAB](https://www.mathworks.com/help/install
 
 ## Folder structure
 
-The repository is organised into xx folders:
-- 
+The repository is organised into 2 folders:
+- `code/` folder, which is further divided into 3 subfolders according to the software used to generate the codes:
+   * `matlab/` folder
+   * `R/` folder
+   * `stata/` folder
+All subfolders contain scripts used to generate results and figures of Chapter 5 in the thesis.
+- `data/` folder, which contains source data frames required to run the analysis scripts in the `code/` folder.
+- `result` folder will be automatically generated as outputs of the scripts in the `code/` folder. Some files in this folder also act as source data frames for some of the scripts in the `code/` folder, thus the order of running the scripts is important. This order is described in the `How to use this repository` section).
+
+## Software Requirements
+
+To use this repository fully, you’ll need:
+
+- [MATLAB](https://www.mathworks.com/help/install/ug/install-products-with-internet-connection.html)
+- [STATA](https://www.stata.com)  
+- [R](https://www.r-project.org/) and [RStudio](https://posit.co/downloads/)
+
+These tools work on most systems (Windows, macOS, Linux).
 
 ## How to use this repository
 A. Validity and interpretability analysis
@@ -27,7 +43,7 @@ A. Validity and interpretability analysis
       - Run `validity_analysis` for analysis of validity assessment
       - Run `interpretability_analysis` for analysis of interpretability assessment: typical magnitudes for noxious and innocuous stimuli
    4. Go to `stata/` folder:
-      - Run `IPD_MA_analysis_2` to generate spreadsheets that will be used as source data frames for the next steps of the analysis.
+      - Run `IPD_MA_analysis_2` to generate spreadsheets that will be used as source data frames for the next steps of the analysis, and to analyse and generate the forest plot figure for interpretability results by sites within stimulus types.
    5. Go to `R/` folder:
       - Run `interpretability_analysis_2` for analysis of interpretability assessment: typical magnitudes and effect sizes for each stimulus type
 
@@ -42,3 +58,13 @@ B. Reliability analysis
 3. Go to `stata/` folder:
       - Run `reliability` to generate the agreement cross-table figures and list of agreement coefficient figures for each reliability assesment. Manually screenshot the tables generated. The list of agreement coefficients figures generated here could also be used as a sanity check with the results produced using the script in R (B. Reliability analysis, step 2). 
       - Run `reliability_forestplot` to generate forest plot of reliability results. This figure was edited manually in [Canva](https://www.canva.com) to add the values in the figure.
+
+C. Demographic analysis
+   Go to `stata/` folder:
+   - Run `demographics` for demographic analysis of unique participants (N=601 participants) and of all participants across stimulus types (N=1028 epochs). "Unique" means participants that received more than one stimulus type thus were analysed twice in interpretability analysis were only listed once. The results output for demographic analysis of unique participants (N=601 participants) were used to generate table 5.5 in the thesis, while the results output for demographic analysis of all participants across stimulus types (N=1028 epochs) were used to generate table 5.6 in the thesis.
+
+## Summary
+
+This repository provides a fully reproducible workflow for the preliminary analysis of an individual participant data meta-analysis project, assessing the reliability, validity, and interpretability of an EEG-based measure as a proxy measure of analgesic efficacy in newborns, to support drug development trials. It combines MATLAB-based, STATA-based, and R-based data analysis, published in my doctoral thesis.
+
+For questions or collaboration, please contact the repository maintainer.
